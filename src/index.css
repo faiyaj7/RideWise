@@ -1,68 +1,187 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Universal Selector */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #fffec8;
+}
+
+/* Navbar starts */
+.navbar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: #7afb7ac4; */
+  padding: 20px 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navbar img {
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid #fdfa72;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.navlink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.navlink li {
+  list-style-type: none;
+}
+.navlink li a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: black;
+}
+/* Navbar ends */
+
+/* HeroBanner starts */
+.herobanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.herobanner_left {
+  width: 40%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+
+span {
+  background: orange;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 2px 8px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.button1,
+.button2 {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 15px 25px;
+  font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.button1 {
+  background-color: #ebeb22;
+  color: black;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.button2 {
+  background-color: black;
+  color: white;
+}
+.herobanner_right {
+  width: 50%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.herobanner_right img {
+  width: 100%;
+  border-radius: 20px;
+}
+/* HeroBanner ends */
+
+/* Services section starts */
+.services {
+  width: 75%;
+  margin: 100px auto;
+}
+.services_heading {
+  text-align: center;
+  margin: 10px 0;
+}
+.imageCollection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 300px;
+}
+.imageCollection .imageContainer {
+  width: 30%;
+  height: 100%;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.image_details {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 3px 0;
+}
+
+.image_paragraph {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+/* Services section ends */
+
+/* About section starts */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 100px auto;
+}
+
+.aboutImgContainer {
+  width: 50%;
+}
+.aboutImgContainer img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.aboutTextContainer {
+  width: 40%;
+}
+.aboutTextContainerParagraph {
+  margin: 20px 0;
+}
+.aboutButton {
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* About section ends */
+
+/* footer */
+.footer {
+  background-color: #fbf976;
+  color: black;
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 10px;
+  margin-top: 10px;
 }
